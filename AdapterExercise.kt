@@ -9,9 +9,9 @@ class AdapterExercise {
     // Novo adaptador que usa a antiga conversão e aplica a taxa adicional de GBP para EUR
     class CurrencyAdapter(private val oldConverter: OldCurrencyConverter) {
         fun convertUSDtoEUR(amount: Double): Double {
-            //Taxas de conversão para a adaptação:
-            //1 USD para GBP = 0.80
-            //1 GBP para EUR = 1.0625
+            // Taxas de conversão para a adaptação:
+            // 1 USD para GBP = 0.80
+            // 1 GBP para EUR = 1.0625
             return oldConverter.convertUSDtoGBP(amount) * 1.0625
         }
     }
